@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{book}
+﻿\documentclass[a4paper,12pt]{book}
 \usepackage[T2A]{fontenc}
 \usepackage[koi8-r]{inputenc}
 \usepackage[english,russian]{babel}
@@ -13,32 +13,36 @@
 \begin{document}
 %void
 \slshape {Несобственные кратные интегралы}
-Полного взаимно однозначного соответствия между множествами $n$ чисел $(x_1,...,x_n)$
-и %void
-.
+Полного взаимно однозначного соответствия между множествами $n$ чисел $(x_1,\ldots,x_n)$ и $(\rho,\phi_1,\ldots,\phi_{n-1})$.
 
 Отметим, что
 
-\begin(center)
-	$p = \sqrt{x_1^2+...+x_n^2}$.
-\end(center)
+\begin(equation)
+	$\rho = \sqrt{x_1^2+\cdots+x_n^2}$.
+\end(equation)
 
 Элементарными, но несколько громоздкими вычислениями, которые не будем здесь приводить, можно показать, что якобиан этого преобразования имеет вид
 
-%void
+\begin(equation)
+$$\frac{\partial(x_1,x_2,\ldots,x_n)}{\partial(\rho,\phi_1,\ldots,\phi_{n-1})} = \rho^{n-1}\cos{\phi_2}\cos[2]{\phi_3}\ldots\cos[n-2]{\phi_{n-1}}$$.
+\end(equation)
 
 Положим для краткости
 
-%void
+\begin(equation)
+$$\Phi(\phi_2,\ldots,\phi_{n-1}) = \cos{\phi_2}\cos[2]{\phi_3\ldots\cos[n-2]{\phi_{n-1}}}$$.
+\end(equation)
 
 Легко убедиться, что
 
 %void
 
-Исследуем теперь сходимость интеграла (48.7). В качестве последовательности кубируемых множеств $G_k, k = 1, 2, ...$,
+Исследуем теперь сходимость интеграла (48.7). В качестве последовательности кубируемых множеств $G_k, k = 1, 2,\ldots$,
 монотонно исчерпывающей внешность единичного шара $Q$, возьмем последовательность множеств
 
-%void
+\begin(equation)
+$$G_k = \{\,x = (\rho,\phi_1,\ldots,\phi_{n-1}):1 + \frac1k < \rho < k\,\}, k = 1,2,\ldots$$.
+\end(equation)
 
 Перейдем к сферическим координатам:
 
@@ -56,7 +60,9 @@
 
 Рассмотрим теперь интеграл (48.8). Полагая
 
-%void
+\begin(equation)
+$$G_k = \{\,x = (\rho,\phi_1,\ldots,\phi_{n-1}):\frac1k < \rho < 1 - \frac1k\,\}, k = 3,4,\ldots$$,
+\end(equation)
 
 получим
 
