@@ -1,18 +1,15 @@
-﻿\documentclass[12pt]{book}
+﻿\documentclass[twocolumn,a4paper]{article}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english,russian]{babel}
-\usepackage{amssymb,amsfonts,amsmath,mathtext,cite,enumerate,float} 
-
-\usepackage{geometry} % Меняем поля страницы
-\geometry{left=1.5cm}% левое поле
-\geometry{right=1.5cm}% правое поле
-\geometry{top=1cm}% верхнее поле
-\geometry{bottom=2cm}% нижнее поле
+\usepackage{amssymb,amsfonts,amsmath,mathtext}
+\usepackage[landscape,margin=2cm]{geometry}
+\geometry{left=1.5cm}
+\geometry{right=1.5cm}
 
 \begin{document}
 %void
-\slshape{Несобственные кратные интегралы}
+\sf{\slshape{Несобственные кратные интегралы}}
 
 полного взаимно однозначного соответствия между множествами $n$ чисел $(x_1,\ldots,x_n)$ и $(\rho,\phi_1,\ldots,\phi_{n-1})$.
 
@@ -29,54 +26,63 @@ $\frac{\partial(x_1,x_2,\ldots,x_n)}{\partial(\rho,\phi_1,\ldots,\phi_{n-1})} = 
 $\Phi(\phi_2,\ldots,\phi_{n-1}) = \cos{\phi_2}\cos^2{\phi_3\ldots\cos^{n-2}{\phi_{n-1}}}$.
 \end{center}
 Легко убедиться, что
-
-%void
+\begin{center}
+$c = \int\limits_0^{2\pi} \int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\ldots\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \Phi(\phi_2,\ldots,\phi_{n-1})d\phi_1\ldots d\phi_{n-1} > 0$\footnote[1]{% 
+Это следует из того факта, что если в кубируемой области $G$ функция $f$ непрерывна и неотрицательа и если существует точка $x^{(0)}\in G$ такая, что $f(x^{(0)}) > 0$, то $\int dG > 0$. Действительно, выберем какое-либо $\eta > 0$ так, чтобы $f(x^{(0)}) > \eta > 0$  Тогда существует $\delta > 0$ такая, что для всех $x \in O = O(x^{(0)}, \delta)$ выполняется неравенство $f(x) > \eta$ и $\int fdG \geq \int fdO \geq \eto mes\ O > O$.}
+\end{center}
 
 Исследуем теперь сходимость интеграла (48.7). В качестве последовательности кубируемых множеств $G_k, k = 1, 2,\ldots$,
 монотонно исчерпывающей внешность единичного шара $Q$, возьмем последовательность множеств
-
 \begin{center}
 $G_k = \{\,x = (\rho,\phi_1,\ldots,\phi_{n-1}):1 + \frac1k < \rho < k\,\}, k = 1,2,\ldots$.
 \end{center}
-
 Перейдем к сферическим координатам:
+\begin{center}
+$\int \underset{G_k}{\ldots} \int\frac{dx_1\ldots dx_n}{(\sqrt{x^2_1+\ldots +x^2_n})^a} = $
+\end{center}
+\begin{center}
+$\int\limits^k_{1 + \frac1k}\int\limits_0^{2\pi}\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cdot \cdot \int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\rho^{n-1-\alpha}\Phi(\phi_2,\ldots,\phi_{n-1})d\rho d\phi_1\ldots d\phi_{n-1}$
+\end{center}
 
-%void
+\newpage
 
-\slshape{48.3 Несобственные интегралы функций, имеющих знак}
+{\slshape{48.3 Несобственные интегралы функций, имеющих знак}}
+\begin{center}
+$= c \int\limits^k_{1 + \frac1k} \rho^{n-1-\alpha}d\rho$.
+\end{center}
+Таким образом, вопрос о сходимости интеграла (48.7) свелся к сходимости интеграла $\int\limits_1^{\infty}\rho^{n-1-\alpha}d\rho$, который, как известно (см.п.34.3), сходится при $n - 1 - \alpha < -1$, т.е. при $\alpha < n$, и расходится при $\alpha\le n$. Итак, доказана следующая лемма.
 
-%void
-
-Таким образом, вопрос о сходимости интеграла (48.7) свелся к сходимости интеграла %void
-, который, как известно (см.п.34.3), сходится при $n - 1 - a < -1$, т.е. при $a < n$, и расходится при $a\le n$. Итак, доказана следующая лемма.
-
-\slshape{{\bfseries{Лемма 1.}} Интеграл (48.7) сходится, если %void
-больше размерности пространства, и расходится в противном случае.}
+{\slshape{{\bfseries{Лемма 1.}} Интеграл (48.7) сходится, если %void
+больше размерности пространства, и расходится в противном случае.}}
 
 Рассмотрим теперь интеграл (48.8). Полагая
-
 \begin{center}
 $G_k = \{\,x = (\rho,\phi_1,\ldots,\phi_{n-1}):\frac1k < \rho < 1 - \frac1k\,\}, k = 3,4,\ldots$,
 \end{center}
-
 получим
+\begin{center}
+$\int \ldots \int\frac{dx_1\ldots dx_n}{(\sqrt{x^2_1+\ldots +x^2_n})^a} = $
+\end{center}
+\begin{center}
+$\int\limits^{1-\frac1k}_{\frac1k}\int\limits_0^{2\pi}\int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\cdot \cdot \int\limits_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\rho^{n-1-\alpha}\Phi(\phi_2,\ldots,\phi_{n-1})d\rho d\phi_1\ldots d\phi_{n-1}$
+\end{center}
+\begin{center}
+$= c \int\limits^{1-\frac1k}_{\frac1k} \rho^{n-1-\alpha}d\rho$.
+\end{center}
+Таким образом, вопрос о сходимости интеграла (48.8) свелся к сходимости интеграла $\int\limits_0^1 \rho^{n-1-\alpha}d\rho$. Этот интеграл, как известно, сходится, если $n - 1 - \alpha > -1$, т.е. если $\alpha < n$, и расходится в противном случае. Полученный результат сформулируем снова в виде леммы.
 
-%void
-
-Таким образом, вопрос о сходимости интеграла (48.8) свелся к сходимости интеграла %void
-. Этот интеграл, как известно, сходится, если $n - 1 - a > -1$, т.е. если $a < n$, и расходится в противном случае. Полученный результат сформулируем снова в виде леммы.
-
-\slshape{{\bfseries{Лемма 2.}} Интеграл (48.8) сходится, если $a$
-меньше размерности пространства, и расходится в противном случае.}
+{\slshape{{\bfseries{Лемма 2.}} Интеграл (48.8) сходится, если $\alpha$
+меньше размерности пространства, и расходится в противном случае.}}
 
 Подобно одномерному случаю (см.п. 33.3 и п. 34.3) с помощью интегралов (48.7) и (48.8) можно сформулировать 
 критерии сходимости несобственных кратных интегралов, однако мне не будем на этом подробно останавливаться.
 
-\begin{center}
-\bfseries {48.3 Несобственные интегралы от функций,\\ меняющих знак}
-\end{center}
 
-\slshape{{\bfseries{Определение 3.}} Несобственный интеграл %void
-называется абсолютно сходящимся, если сходится интеграл %void
-.}
+\begin{flushleft}
+{\bfseries  48.3 Несобственные интегралы от функций,\\
+меняющих знак} %VOID
+
+{\slshape{\bf{Определение 3.}} Несобственный интеграл $\int fdG $ называется абсолютно сходящимся, если сходится интеграл $\int |f|dG $.}
+\end{flushleft}
+
 \end{document}
